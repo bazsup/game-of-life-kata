@@ -4,5 +4,5 @@
   "predict": "on",
   "revert_red": "on",
   "revert_amber": "on",
-  "revert_green": "off"
+  "revert_green": "on"
 }
