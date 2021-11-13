@@ -269,7 +269,7 @@ describe('gameOfLife', () => {
     expect(nextGen).toBe(expectedUniverse);
   });
   
-  it.skip('example 1', () => {
+  it('example 1', () => {
     const expectedUniverse = '........\n' +
                      '...**...\n' +
                      '...***..\n' +
