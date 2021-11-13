@@ -2,7 +2,4 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-
-> @ test /sandbox
-> jest --maxWorkers=2
-
+gol.test.ts(9,24): error TS2554: Expected 0 arguments, but got 1.
