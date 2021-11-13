@@ -6,3 +6,8 @@
 > @ test /sandbox
 > jest --maxWorkers=2
 
+  console.log
+    [ [ '', '*' ], [ '*', '' ] ] { row: 2, col: 0 } 1
+
+      at Object.getNumOfNeighbors (gol.ts:23:11)
+
