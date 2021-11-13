@@ -20,14 +20,16 @@ export function getNumOfNeighbors(board: string[][], position: Position): number
   const hasSpaceRight = board[0].length > col + 1
   const hasSpaceLeft = col - 1 >= 0
   
-  const hasRightNeighbor = board[row][col + 1] === '*'
-  const hasLeftNeighbor = board[row][col - 1] === '*'
-  const hasBottomNeighbor = (hasSpaceBelow && board[row + 1][col] === '*')
-  const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === '*')
-  const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === '*'
-  const hasDiagonalTopRightNeighbor = hasSpaceAbove && hasSpaceRight && board[row - 1][col + 1] === '*'   
-  const hasDiagonalBottomLeftNeighbor = hasSpaceBelow && hasSpaceLeft && board[row + 1][col - 1] === '*'
-  const hasDiagonalBottomRightNeighbor = hasSpaceBelow && hasSpaceRight && board[row + 1][col + 1] === '*'
+  const aliveSymbol = '*'
+  
+  const hasRightNeighbor = board[row][col + 1] === aliveSymbol
+  const hasLeftNeighbor = board[row][col - 1] === aliveSymbol
+  const hasBottomNeighbor = (hasSpaceBelow && board[row + 1][col] === aliveSymbol)
+  const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === aliveSymbol)
+  const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === aliveSymbol
+  const hasDiagonalTopRightNeighbor = hasSpaceAbove && hasSpaceRight && board[row - 1][col + 1] === aliveSymbol
+  const hasDiagonalBottomLeftNeighbor = hasSpaceBelow && hasSpaceLeft && board[row + 1][col - 1] === aliveSymbol
+  const hasDiagonalBottomRightNeighbor = hasSpaceBelow && hasSpaceRight && board[row + 1][col + 1] === aliveSymbol
 
   if (hasDiagonalBottomRightNeighbor) return 1
   if (hasDiagonalBottomLeftNeighbor) return 1
