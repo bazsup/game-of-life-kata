@@ -2,4 +2,4 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.test.ts(34,20): error TS2304: Cannot find name 'getNumOfNeighbors'.
+gol.test.ts(1,42): error TS2459: Module '"./gol"' declares 'Position' locally, but it is not exported.

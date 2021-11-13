@@ -1,4 +1,4 @@
-import { isCellAlive } from './gol';
+import { isCellAlive, getNumOfNeighbors, Position } from './gol';
 
 describe('isCellAlive', () => {
   it('an alive cell should be die when has no neighbor', () => {
@@ -30,8 +30,9 @@ describe('getNumOfNeighbors', () => {
     const board = [
       ['*']
     ];
+    const position: Position = {row: 0, col: 0}
 
-    const result = getNumOfNeighbors(board, {row: 0, col: 0})
+    const result = getNumOfNeighbors(board, position)
     
     expect(result).toEqual(0)
   });
