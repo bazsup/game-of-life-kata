@@ -1,57 +1,30 @@
-FAIL ./gol.test.ts
+PASS ./gol.test.ts
   isCellAlive
-    ✓ an alive cell should be die when has no neighbor (2 ms)
-    ✓ an alive cell should still alive when has 2 neighbors
+    ✓ an alive cell should be die when has no neighbor (3 ms)
+    ✓ an alive cell should still alive when has 2 neighbors (1 ms)
     ✓ a dead cell should be alive when has 3 neighbors
-    ✓ a dead cell should still die when has 2 neighbors (1 ms)
+    ✓ a dead cell should still die when has 2 neighbors
   getNumOfNeighbors
     ✓ should has no neighbor
-    ✓ position 0, 0 should return 1 when has 1 neighbor on the right (1 ms)
+    ✓ position 0, 0 should return 1 when has 1 neighbor on the right
     ✓ position 0, 2 should return 1 when has 1 neighbor on the right
-    ✓ position 0, 1 should return 1 when has 1 neighbor on the left
-    ✓ position 0, 2 should return 1 when has 1 neighbor on the left (1 ms)
+    ✓ position 0, 1 should return 1 when has 1 neighbor on the left (1 ms)
+    ✓ position 0, 2 should return 1 when has 1 neighbor on the left
     ✓ position 0, 0 should return 1 when has 1 neighbor on the bottom
-    ✓ position 1, 0 should return 1 when has 1 neighbor on the bottom
+    ✓ position 1, 0 should return 1 when has 1 neighbor on the bottom (5 ms)
     ✓ position 1, 1 should return 1 when has 1 neighbor on the bottom (1 ms)
     ✓ position 1, 0 should return 1 when has 1 neighbor on the top
     ✓ position 2, 0 should return 1 when has 1 neighbor on the top
-    ✓ position 2, 1 should return 1 when has 1 neighbor on the top
-    ✓ position 1, 1 should return 1 when has 1 neighbor on diagonal top left (1 ms)
-    ✓ position 2, 2 should return 1 when has 1 neighbor on diagonal top left (3 ms)
+    ✓ position 2, 1 should return 1 when has 1 neighbor on the top (1 ms)
+    ✓ position 1, 1 should return 1 when has 1 neighbor on diagonal top left
+    ✓ position 2, 2 should return 1 when has 1 neighbor on diagonal top left
     ✓ position 1, 0 should return 1 when has 1 neighbor on diagonal top right
-    ✓ position 0, 1 should return 1 when has 1 neighbor on diagonal bottom left
+    ✓ position 0, 1 should return 1 when has 1 neighbor on diagonal bottom left (1 ms)
     ✓ position 0, 0 should return 1 when has 1 neighbor on diagonal bottom right
-    ✕ position 1, 1 should return 8 when has 8 neighbors around (3 ms)
+    ✓ position 1, 1 should return 8 when has 8 neighbors around
 
-  ● getNumOfNeighbors › position 1, 1 should return 8 when has 8 neighbors around
-
-    expect(received).toEqual(expected) // deep equality
-
-    Expected: 8
-    Received: 1
-
-      228 |     const result = getNumOfNeighbors(board, position)
-      229 |     
-    > 230 |     expect(result).toEqual(8)
-          |                    ^
-      231 |   });
-      232 | 
-      233 | })
-
-      at Object.<anonymous> (gol.test.ts:230:20)
-
-Test Suites: 1 failed, 1 total
-Tests:       1 failed, 20 passed, 21 total
+Test Suites: 1 passed, 1 total
+Tests:       21 passed, 21 total
 Snapshots:   0 total
-Time:        3.756 s
+Time:        3.8 s
 Ran all test suites.
-npm ERR! code ELIFECYCLE
-npm ERR! errno 1
-npm ERR! @ test: `jest --maxWorkers=2`
-npm ERR! Exit status 1
-npm ERR! 
-npm ERR! Failed at the @ test script.
-npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2021-11-13T15_25_29_086Z-debug.log

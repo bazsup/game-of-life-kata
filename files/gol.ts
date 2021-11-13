@@ -31,14 +31,15 @@ export function getNumOfNeighbors(board: string[][], position: Position): number
   const hasDiagonalBottomLeftNeighbor = hasSpaceBelow && hasSpaceLeft && board[row + 1][col - 1] === aliveSymbol
   const hasDiagonalBottomRightNeighbor = hasSpaceBelow && hasSpaceRight && board[row + 1][col + 1] === aliveSymbol
 
-  if (hasDiagonalBottomRightNeighbor) return 1
-  if (hasDiagonalBottomLeftNeighbor) return 1
-  if (hasDiagonalTopRightNeighbor) return 1
-  if (hasDiagonalTopLeftNeighbor) return 1
-  if (hasTopNeighbor) return 1
-  if (hasBottomNeighbor) return 1
-  if (hasLeftNeighbor) return 1
-  if (hasRightNeighbor) return 1
-  
-  return 0;
+  const conditions = [
+    hasDiagonalBottomRightNeighbor,
+    hasDiagonalBottomLeftNeighbor,
+    hasDiagonalTopRightNeighbor,
+    hasDiagonalTopLeftNeighbor,
+    hasTopNeighbor,
+    hasBottomNeighbor,
+    hasLeftNeighbor,
+    hasRightNeighbor
+  ]
+  return conditions.filter((con) => con).length
 }
