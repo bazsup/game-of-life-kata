@@ -193,12 +193,12 @@ describe('getNumOfNeighbors', () => {
     expect(result).toEqual(1)
   });
   
-  it.only('position 0, 1 should return 1 when has 1 neighbor on diagonal bottom left', () => {
+  it('position 0, 1 should return 1 when has 1 neighbor on diagonal bottom left', () => {
     const board = [
       ['', '*'],
       ['*', ''],
     ];
-    const position: Position = {row: 2, col: 0}
+    const position: Position = {row: 0, col: 1}
 
     const result = getNumOfNeighbors(board, position)
     
