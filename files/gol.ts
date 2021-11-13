@@ -1,8 +1,9 @@
 export function isCellAlive(numOfNeighbors: number, isAlive: boolean): boolean {
-  const isTwoOrThreeNeighbors = numOfNeighbors === 2 || numOfNeighbors === 3
+  const isAliveAndHasTwoOrThreeNeighbors = isAlive && numOfNeighbors === 2 || numOfNeighbors === 3
+  const isDeadAndHasThreeNeighbors = !isAlive && numOfNeighbors == 3
   
-  if (!isAlive && numOfNeighbors == 3) return true
-  if (isAlive && isTwoOrThreeNeighbors) return true
+  if (isDeadAndHasThreeNeighbors) return true
+  if (isAliveAndHasTwoOrThreeNeighbors) return true
   
   return false;
 }
