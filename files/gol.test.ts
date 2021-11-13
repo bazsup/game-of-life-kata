@@ -80,7 +80,7 @@ describe('getNumOfNeighbors', () => {
     expect(result).toEqual(1)
   });
   
-  it('position 0, 0 should return 1 when has 1 neighbor below', () => {
+  it('position 0, 0 should return 1 when has 1 neighbor on the bottom', () => {
     const board = [
       ['*'],
       ['*']
@@ -92,7 +92,7 @@ describe('getNumOfNeighbors', () => {
     expect(result).toEqual(1)
   });
   
-  it('position 1, 0 should return 1 when has 1 neighbor below', () => {
+  it('position 1, 0 should return 1 when has 1 neighbor on the bottom', () => {
     const board = [
       [''],
       ['*'],
