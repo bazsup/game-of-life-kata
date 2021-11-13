@@ -1,3 +1,3 @@
-export function answer(): boolean {
+export function isCellAlive(): boolean {
   return false;
 }

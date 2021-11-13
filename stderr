@@ -5,5 +5,5 @@ PASS ./gol.test.ts
 Test Suites: 1 passed, 1 total
 Tests:       1 passed, 1 total
 Snapshots:   0 total
-Time:        3.622 s
+Time:        3.629 s
 Ran all test suites.
