@@ -68,5 +68,16 @@ describe('getNumOfNeighbors', () => {
     
     expect(result).toEqual(1)
   });
+  
+  it('position 0, 2 should return 1 when has 1 neighbor on the left', () => {
+    const board = [
+      ['', '*', '*']
+    ];
+    const position: Position = {row: 0, col: 2}
+
+    const result = getNumOfNeighbors(board, position)
+    
+    expect(result).toEqual(1)
+  });
 
 })
