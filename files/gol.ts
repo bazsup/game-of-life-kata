@@ -20,8 +20,6 @@ export function getNumOfNeighbors(board: string[][], position: Position): number
   const hasSpaceRight = board[0].length > col + 1
   const hasSpaceLeft = col - 1 >= 0
   
-  console.log(board, row + 1, col - 1, board[row + 1][col - 1], hasSpaceBelow && hasSpaceLeft)
-  
   const hasRightNeighbor = board[row][col + 1] === '*'
   const hasLeftNeighbor = board[row][col - 1] === '*'
   const hasBottomNeighbor = (hasSpaceBelow && board[row + 1][col] === '*')
@@ -30,6 +28,7 @@ export function getNumOfNeighbors(board: string[][], position: Position): number
   const hasDiagonalTopRightNeighbor = hasSpaceAbove && hasSpaceRight && board[row - 1][col + 1] === '*'   
   const hasDiagonalBottomLeftNeighbor = hasSpaceBelow && hasSpaceLeft && board[row + 1][col - 1] === '*'
 
+  if (hasDiagonalBottomLeftNeighbor) return 1
   if (hasDiagonalTopRightNeighbor) return 1
   if (hasDiagonalTopLeftNeighbor) return 1
   if (hasTopNeighbor) return 1

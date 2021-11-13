@@ -1,11 +1,11 @@
-FAIL ./gol.test.ts
+PASS ./gol.test.ts
   isCellAlive
     ○ skipped an alive cell should be die when has no neighbor
     ○ skipped an alive cell should still alive when has 2 neighbors
     ○ skipped a dead cell should be alive when has 3 neighbors
     ○ skipped a dead cell should still die when has 2 neighbors
   getNumOfNeighbors
-    ✕ position 0, 1 should return 1 when has 1 neighbor on diagonal bottom left (23 ms)
+    ✓ position 0, 1 should return 1 when has 1 neighbor on diagonal bottom left (2 ms)
     ○ skipped should has no neighbor
     ○ skipped position 0, 0 should return 1 when has 1 neighbor on the right
     ○ skipped position 0, 2 should return 1 when has 1 neighbor on the right
@@ -21,35 +21,8 @@ FAIL ./gol.test.ts
     ○ skipped position 2, 2 should return 1 when has 1 neighbor on diagonal top left
     ○ skipped position 1, 0 should return 1 when has 1 neighbor on diagonal top right
 
-  ● getNumOfNeighbors › position 0, 1 should return 1 when has 1 neighbor on diagonal bottom left
-
-    expect(received).toEqual(expected) // deep equality
-
-    Expected: 1
-    Received: 0
-
-      203 |     const result = getNumOfNeighbors(board, position)
-      204 |     
-    > 205 |     expect(result).toEqual(1)
-          |                    ^
-      206 |   });
-      207 | 
-      208 | })
-
-      at Object.<anonymous> (gol.test.ts:205:20)
-
-Test Suites: 1 failed, 1 total
-Tests:       1 failed, 18 skipped, 19 total
+Test Suites: 1 passed, 1 total
+Tests:       18 skipped, 1 passed, 19 total
 Snapshots:   0 total
-Time:        3.455 s
+Time:        3.623 s
 Ran all test suites.
-npm ERR! code ELIFECYCLE
-npm ERR! errno 1
-npm ERR! @ test: `jest --maxWorkers=2`
-npm ERR! Exit status 1
-npm ERR! 
-npm ERR! Failed at the @ test script.
-npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
-
-npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2021-11-13T15_20_25_717Z-debug.log
