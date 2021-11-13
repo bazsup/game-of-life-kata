@@ -1,21 +1,138 @@
-PASS ./gol.test.ts
+FAIL ./gol.test.ts
   isCellAlive
-    ✓ an alive cell should be die when has no neighbor (3 ms)
+    ✓ an alive cell should be die when has no neighbor (5 ms)
     ✓ an alive cell should still alive when has 2 neighbors
     ✓ a dead cell should be alive when has 3 neighbors (1 ms)
     ✓ a dead cell should still die when has 2 neighbors
   getNumOfNeighbors
-    ✓ should has no neighbor (1 ms)
-    ✓ position 0, 0 should return 1 when has 1 neighbor on the right
-    ✓ position 0, 2 should return 1 when has 1 neighbor on the right
-    ✓ position 0, 1 should return 1 when has 1 neighbor on the left (1 ms)
-    ✓ position 0, 2 should return 1 when has 1 neighbor on the left
-    ✓ position 0, 0 should return 1 when has 1 neighbor on the bottom (1 ms)
-    ✓ position 1, 0 should return 1 when has 1 neighbor on the bottom
+    ✕ should has no neighbor (4 ms)
+    ✕ position 0, 0 should return 1 when has 1 neighbor on the right (1 ms)
+    ✕ position 0, 2 should return 1 when has 1 neighbor on the right (1 ms)
+    ✕ position 0, 1 should return 1 when has 1 neighbor on the left
+    ✕ position 0, 2 should return 1 when has 1 neighbor on the left (1 ms)
+    ✕ position 0, 0 should return 1 when has 1 neighbor on the bottom
+    ✕ position 1, 0 should return 1 when has 1 neighbor on the bottom (2 ms)
     ✓ position 1, 0 should return 1 when has 1 neighbor on the top (1 ms)
 
-Test Suites: 1 passed, 1 total
-Tests:       12 passed, 12 total
+  ● getNumOfNeighbors › should has no neighbor
+
+    TypeError: Cannot read property '0' of undefined
+
+      18 |   const hasRightNeighbor = board[row][col + 1] === '*'
+      19 |   const hasLeftNeighbor = board[row][col - 1] === '*'
+    > 20 |   const hasBottomNeighbor = (board.length > position.row && board[row - 1][0] === '*')
+         |                                                                           ^
+      21 |   if (board.length == 2 && board[0][0] === '*') return 1
+      22 |   if (hasBottomNeighbor) return 1
+      23 |   if (hasLeftNeighbor) return 1
+
+      at Object.getNumOfNeighbors (gol.ts:20:75)
+      at Object.<anonymous> (gol.test.ts:34:20)
+
+  ● getNumOfNeighbors › position 0, 0 should return 1 when has 1 neighbor on the right
+
+    TypeError: Cannot read property '0' of undefined
+
+      18 |   const hasRightNeighbor = board[row][col + 1] === '*'
+      19 |   const hasLeftNeighbor = board[row][col - 1] === '*'
+    > 20 |   const hasBottomNeighbor = (board.length > position.row && board[row - 1][0] === '*')
+         |                                                                           ^
+      21 |   if (board.length == 2 && board[0][0] === '*') return 1
+      22 |   if (hasBottomNeighbor) return 1
+      23 |   if (hasLeftNeighbor) return 1
+
+      at Object.getNumOfNeighbors (gol.ts:20:75)
+      at Object.<anonymous> (gol.test.ts:45:20)
+
+  ● getNumOfNeighbors › position 0, 2 should return 1 when has 1 neighbor on the right
+
+    TypeError: Cannot read property '0' of undefined
+
+      18 |   const hasRightNeighbor = board[row][col + 1] === '*'
+      19 |   const hasLeftNeighbor = board[row][col - 1] === '*'
+    > 20 |   const hasBottomNeighbor = (board.length > position.row && board[row - 1][0] === '*')
+         |                                                                           ^
+      21 |   if (board.length == 2 && board[0][0] === '*') return 1
+      22 |   if (hasBottomNeighbor) return 1
+      23 |   if (hasLeftNeighbor) return 1
+
+      at Object.getNumOfNeighbors (gol.ts:20:75)
+      at Object.<anonymous> (gol.test.ts:56:20)
+
+  ● getNumOfNeighbors › position 0, 1 should return 1 when has 1 neighbor on the left
+
+    TypeError: Cannot read property '0' of undefined
+
+      18 |   const hasRightNeighbor = board[row][col + 1] === '*'
+      19 |   const hasLeftNeighbor = board[row][col - 1] === '*'
+    > 20 |   const hasBottomNeighbor = (board.length > position.row && board[row - 1][0] === '*')
+         |                                                                           ^
+      21 |   if (board.length == 2 && board[0][0] === '*') return 1
+      22 |   if (hasBottomNeighbor) return 1
+      23 |   if (hasLeftNeighbor) return 1
+
+      at Object.getNumOfNeighbors (gol.ts:20:75)
+      at Object.<anonymous> (gol.test.ts:67:20)
+
+  ● getNumOfNeighbors › position 0, 2 should return 1 when has 1 neighbor on the left
+
+    TypeError: Cannot read property '0' of undefined
+
+      18 |   const hasRightNeighbor = board[row][col + 1] === '*'
+      19 |   const hasLeftNeighbor = board[row][col - 1] === '*'
+    > 20 |   const hasBottomNeighbor = (board.length > position.row && board[row - 1][0] === '*')
+         |                                                                           ^
+      21 |   if (board.length == 2 && board[0][0] === '*') return 1
+      22 |   if (hasBottomNeighbor) return 1
+      23 |   if (hasLeftNeighbor) return 1
+
+      at Object.getNumOfNeighbors (gol.ts:20:75)
+      at Object.<anonymous> (gol.test.ts:78:20)
+
+  ● getNumOfNeighbors › position 0, 0 should return 1 when has 1 neighbor on the bottom
+
+    TypeError: Cannot read property '0' of undefined
+
+      18 |   const hasRightNeighbor = board[row][col + 1] === '*'
+      19 |   const hasLeftNeighbor = board[row][col - 1] === '*'
+    > 20 |   const hasBottomNeighbor = (board.length > position.row && board[row - 1][0] === '*')
+         |                                                                           ^
+      21 |   if (board.length == 2 && board[0][0] === '*') return 1
+      22 |   if (hasBottomNeighbor) return 1
+      23 |   if (hasLeftNeighbor) return 1
+
+      at Object.getNumOfNeighbors (gol.ts:20:75)
+      at Object.<anonymous> (gol.test.ts:90:20)
+
+  ● getNumOfNeighbors › position 1, 0 should return 1 when has 1 neighbor on the bottom
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 1
+    Received: 0
+
+      103 |     const result = getNumOfNeighbors(board, position)
+      104 |     
+    > 105 |     expect(result).toEqual(1)
+          |                    ^
+      106 |   });
+      107 |   
+      108 |   it('position 1, 0 should return 1 when has 1 neighbor on the top', () => {
+
+      at Object.<anonymous> (gol.test.ts:105:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       7 failed, 5 passed, 12 total
 Snapshots:   0 total
-Time:        3.623 s
+Time:        3.695 s
 Ran all test suites.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ test: `jest --maxWorkers=2`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2021-11-13T14_38_20_397Z-debug.log
