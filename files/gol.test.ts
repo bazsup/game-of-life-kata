@@ -58,11 +58,11 @@ describe('getNumOfNeighbors', () => {
     expect(result).toEqual(1)
   });
   
-  it.skip('should return 1 for 1 neighbor on the left', () => {
+  it('position 0, 1 should return 1 when has 1 neighbor on the left', () => {
     const board = [
-      ['', '', '*', '*']
+      ['*', '*']
     ];
-    const position: Position = {row: 0, col: 3}
+    const position: Position = {row: 0, col: 1}
 
     const result = getNumOfNeighbors(board, position)
     
