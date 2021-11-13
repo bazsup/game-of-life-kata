@@ -909,5 +909,21 @@
       30,
       290553
     ]
+  },
+  {
+    "duration": 8.481488,
+    "colour": "green",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 57,
+    "time": [
+      2021,
+      11,
+      13,
+      14,
+      24,
+      58,
+      383572
+    ]
   }
 ]
