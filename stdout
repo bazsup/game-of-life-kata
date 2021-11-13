@@ -2,7 +2,9 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-
-> @ test /sandbox
-> jest --maxWorkers=2
-
+gol.ts(24,40): error TS1005: ',' expected.
+gol.ts(24,45): error TS1005: ',' expected.
+gol.ts(24,50): error TS1005: ',' expected.
+gol.ts(24,55): error TS1005: ',' expected.
+gol.ts(24,58): error TS1005: ';' expected.
+gol.ts(24,60): error TS1109: Expression expected.

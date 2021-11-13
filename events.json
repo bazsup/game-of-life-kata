@@ -1629,5 +1629,21 @@
       47,
       114729
     ]
+  },
+  {
+    "duration": 4.103003,
+    "colour": "amber",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 102,
+    "time": [
+      2021,
+      11,
+      13,
+      15,
+      15,
+      35,
+      398955
+    ]
   }
 ]
