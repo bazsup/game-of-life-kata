@@ -1,17 +1,44 @@
-PASS ./gol.test.ts
+FAIL ./gol.test.ts
   isCellAlive
-    ✓ an alive cell should be die when has no neighbor (2 ms)
-    ✓ an alive cell should still alive when has 2 neighbors (1 ms)
-    ✓ a dead cell should be alive when has 3 neighbors
+    ✓ an alive cell should be die when has no neighbor (3 ms)
+    ✓ an alive cell should still alive when has 2 neighbors
+    ✓ a dead cell should be alive when has 3 neighbors (1 ms)
     ✓ a dead cell should still die when has 2 neighbors
   getNumOfNeighbors
-    ✓ should has no neighbor
-    ✓ position 0, 0 should return 1 when has 1 neighbor on the right
-    ✓ position 0, 2 should return 1 when has 1 neighbor on the right (1 ms)
+    ✕ should has no neighbor (3 ms)
+    ✓ position 0, 0 should return 1 when has 1 neighbor on the right (1 ms)
+    ✓ position 0, 2 should return 1 when has 1 neighbor on the right
     ○ skipped should return 1 for 1 neighbor on the left
 
-Test Suites: 1 passed, 1 total
-Tests:       1 skipped, 7 passed, 8 total
+  ● getNumOfNeighbors › should has no neighbor
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 0
+    Received: 1
+
+      34 |     const result = getNumOfNeighbors(board, position)
+      35 |     
+    > 36 |     expect(result).toEqual(0)
+         |                    ^
+      37 |   });
+      38 |   
+      39 |   it('position 0, 0 should return 1 when has 1 neighbor on the right', () => {
+
+      at Object.<anonymous> (gol.test.ts:36:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 skipped, 6 passed, 8 total
 Snapshots:   0 total
-Time:        3.624 s
+Time:        3.576 s
 Ran all test suites.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ test: `jest --maxWorkers=2`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2021-11-13T14_16_24_303Z-debug.log
