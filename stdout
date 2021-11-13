@@ -2,4 +2,12 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.ts(23,46): error TS2695: Left side of comma operator is unused and has no side effects.
+
+> @ test /sandbox
+> jest --maxWorkers=2
+
+  console.log
+    [ [ '', '*' ], [ '*', '' ] ] 1 0 *
+
+      at Object.getNumOfNeighbors (gol.ts:23:11)
+
