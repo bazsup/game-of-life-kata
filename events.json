@@ -395,5 +395,21 @@
       18,
       751746
     ]
+  },
+  {
+    "duration": 8.627502,
+    "colour": "green",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 25,
+    "time": [
+      2021,
+      11,
+      13,
+      13,
+      48,
+      52,
+      487938
+    ]
   }
 ]
