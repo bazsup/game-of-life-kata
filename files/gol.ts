@@ -24,7 +24,7 @@ export function getNumOfNeighbors(board: string[][], position: Position): number
   const hasBottomNeighbor = (hasSpaceBelow && board[row + 1][col] === '*')
   const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === '*')
   const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === '*'
-  const hasDiagonalTopRightNeighbor = hasSpaceAbove && hasSpaceRight && board[row + 1][col + 1] === '*'
+  const hasDiagonalTopRightNeighbor = hasSpaceAbove && hasSpaceRight && board[row + 1][col - 1] === '*'
 
   if (hasDiagonalTopRightNeighbor) return 1
   if (hasDiagonalTopLeftNeighbor) return 1
