@@ -13,6 +13,8 @@ export interface Position {
   col: number;
 }
 
+export type Board = string[][]
+
 export function getNumOfNeighbors(board: string[][], position: Position): number {
   const { row, col } = position
   const hasSpaceBelow = board.length > row + 1
@@ -42,4 +44,8 @@ export function getNumOfNeighbors(board: string[][], position: Position): number
     hasRightNeighbor
   ]
   return conditions.filter((con) => con).length
+}
+
+export function gameOfLife(board: Board): Board {
+
 }

@@ -1,4 +1,4 @@
-import { isCellAlive, getNumOfNeighbors, Position } from './gol';
+import { isCellAlive, getNumOfNeighbors, Position, Board } from './gol';
 
 describe('isCellAlive', () => {
   it('an alive cell should be die when has no neighbor', () => {
@@ -233,7 +233,7 @@ describe('getNumOfNeighbors', () => {
 });
 
 
-const createBoard = (boardString) => {
+const createBoard = (boardString: string): Board => {
  const rows = boardString.split('\n')
  const board = rows.map(row => {
     return row.split('')
@@ -255,7 +255,7 @@ describe('gameOfLife', () => {
   
   it.skip('example 1', () => {
   
-  const boardSize = { row: 4, col: 8 };
+  const boardSize: Position = { row: 4, col: 8 };
     const expectedBoard = '........\n' +
                      '...**...\n' +
                      '...***..\n' +
