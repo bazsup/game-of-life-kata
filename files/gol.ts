@@ -8,7 +8,7 @@ export function isCellAlive(numOfNeighbors: number, isAlive: boolean): boolean {
   return false;
 }
 
-export interface Position {
+interface Position {
   x: number;
   y: number;
 }

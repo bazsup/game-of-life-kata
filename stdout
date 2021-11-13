@@ -2,5 +2,4 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.test.ts(31,33): error TS2322: Type '{ row: number; col: number; }' is not assignable to type 'Position'.
-  Object literal may only specify known properties, and 'row' does not exist in type 'Position'.
+gol.test.ts(34,20): error TS2304: Cannot find name 'getNumOfNeighbors'.
