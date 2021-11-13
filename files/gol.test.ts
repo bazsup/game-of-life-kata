@@ -1,4 +1,4 @@
-import { isCellAlive, getNumOfNeighbors, gameOfLife, Position, Board } from './gol';
+import { isCellAlive, getNumOfNeighbors, gameOfLife, Position, Universe } from './gol';
 
 describe('isCellAlive', () => {
   it('an alive cell should be die when has no neighbor', () => {
@@ -233,34 +233,40 @@ describe('getNumOfNeighbors', () => {
 });
 
 
-const createBoard = (boardString: string): Board => {
- const rows = boardString.split('\n')
+const createBoard = (universeString: string): Universe => {
+ const rows = universeString.split('\n')
  const board = rows.map(row => {
     return row.split('')
  });
  return board
 }
 
-describe('createBoard', () => {
-  it('should create a board from string', () => {
-    const result = createBoard('*.\n' + '.*')
+describe('createUniverse', () => {
+  it('should create a universe from string', () => {
+    const result = createUniverse('*.\n' + '.*')
     expect(result).toEqual([['*', '.'], ['.', '*']])
   });
 });
 
+const convertUniverseToString = (universe: Universe): string => {
+  return universe.map((rows) => rows.join('') ).join('\n')
+}
+
 describe('gameOfLife', () => {
   it('horizontal line should return vertical line for next generation', () => {
-    const expectedBoard = '.*.\n' +
-                          '.*.\n' +
-                          '.*.\n';
+    const expectedUniverse = '.*.\n' +
+                             '.*.\n' +
+                             '.*.';
                           
-    const initialBoard = '...\n' +
-                         '***\n' +
-                         '...\n';
+    const initialUniverse = '...\n' +
+                            '***\n' +
+                            '...';
                          
     const board = createBoard(initialBoard);
 
-    expect(gameOfLife(board)).toBe(expectedBoard);
+    const nextGen = convertUniverseToString(gameOfLife(board))
+
+    expect(gameOfLife(board).join()).toBe(expectedBoard);
   });
   
   it.skip('example 1', () => {

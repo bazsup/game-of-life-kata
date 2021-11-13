@@ -13,7 +13,7 @@ export interface Position {
   col: number;
 }
 
-export type Board = string[][]
+export type Universe = string[][]
 
 export function getNumOfNeighbors(board: string[][], position: Position): number {
   const { row, col } = position
@@ -46,13 +46,13 @@ export function getNumOfNeighbors(board: string[][], position: Position): number
   return conditions.filter((con) => con).length
 }
 
-export function gameOfLife(board: Board): Board {
-  const newBoard = board.map((vRows, row) => {
+export function gameOfLife(universe: Universe): Universe {
+  const nextGeneration = universe.map((vRows, row) => {
     return vRows.map((cell, col) => {
       const alive = cell === '*'
-      const numOfNeighbors = getNumOfNeighbors(board, {row, col})
+      const numOfNeighbors = getNumOfNeighbors(universe, {row, col})
       return isCellAlive(numOfNeighbors, alive) ? '*' : '.'
     })
   });
-  return newBoard
+  return nextGeneration
 }

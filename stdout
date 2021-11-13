@@ -2,7 +2,6 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-
-> @ test /sandbox
-> jest --maxWorkers=2
-
+gol.test.ts(246,20): error TS2304: Cannot find name 'createUniverse'.
+gol.test.ts(265,31): error TS2304: Cannot find name 'initialBoard'.
+gol.test.ts(269,43): error TS2304: Cannot find name 'expectedBoard'.
