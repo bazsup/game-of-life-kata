@@ -1,194 +1,44 @@
 FAIL ./gol.test.ts
   isCellAlive
-    ✓ an alive cell should be die when has no neighbor (3 ms)
-    ✓ an alive cell should still alive when has 2 neighbors
+    ✓ an alive cell should be die when has no neighbor (2 ms)
+    ✓ an alive cell should still alive when has 2 neighbors (1 ms)
     ✓ a dead cell should be alive when has 3 neighbors
     ✓ a dead cell should still die when has 2 neighbors
   getNumOfNeighbors
-    ✕ should has no neighbor (6 ms)
-    ✕ position 0, 0 should return 1 when has 1 neighbor on the right (1 ms)
-    ✕ position 0, 2 should return 1 when has 1 neighbor on the right
-    ✕ position 0, 1 should return 1 when has 1 neighbor on the left
-    ✕ position 0, 2 should return 1 when has 1 neighbor on the left (1 ms)
+    ✓ should has no neighbor
+    ✓ position 0, 0 should return 1 when has 1 neighbor on the right
+    ✓ position 0, 2 should return 1 when has 1 neighbor on the right (1 ms)
+    ✓ position 0, 1 should return 1 when has 1 neighbor on the left
+    ✓ position 0, 2 should return 1 when has 1 neighbor on the left
     ✓ position 0, 0 should return 1 when has 1 neighbor on the bottom
-    ✓ position 1, 0 should return 1 when has 1 neighbor on the bottom
-    ✓ position 1, 1 should return 1 when has 1 neighbor on the bottom (1 ms)
-    ✕ position 1, 0 should return 1 when has 1 neighbor on the top
-    ✕ position 2, 0 should return 1 when has 1 neighbor on the top
-    ✕ position 2, 1 should return 1 when has 1 neighbor on the top (1 ms)
-    ✕ position 1, 1 should return 1 when has 1 neighbor on diagonal top left (4 ms)
-    ✕ position 2, 2 should return 1 when has 1 neighbor on diagonal top left (1 ms)
-    ✕ position 1, 0 should return 1 when has 1 neighbor on diagonal top right
-
-  ● getNumOfNeighbors › should has no neighbor
-
-    TypeError: Cannot read property '1' of undefined
-
-      24 |   const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === '*')
-      25 |   const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === '*'
-    > 26 |   const hasDiagonalTopRightNeighbor = board[row + 1][col + 1] === '*'
-         |                                                     ^
-      27 | 
-      28 |   if (hasDiagonalTopRightNeighbor) return 1
-      29 |   if (hasDiagonalTopLeftNeighbor) return 1
-
-      at Object.getNumOfNeighbors (gol.ts:26:53)
-      at Object.<anonymous> (gol.test.ts:34:20)
-
-  ● getNumOfNeighbors › position 0, 0 should return 1 when has 1 neighbor on the right
-
-    TypeError: Cannot read property '1' of undefined
-
-      24 |   const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === '*')
-      25 |   const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === '*'
-    > 26 |   const hasDiagonalTopRightNeighbor = board[row + 1][col + 1] === '*'
-         |                                                     ^
-      27 | 
-      28 |   if (hasDiagonalTopRightNeighbor) return 1
-      29 |   if (hasDiagonalTopLeftNeighbor) return 1
-
-      at Object.getNumOfNeighbors (gol.ts:26:53)
-      at Object.<anonymous> (gol.test.ts:45:20)
-
-  ● getNumOfNeighbors › position 0, 2 should return 1 when has 1 neighbor on the right
-
-    TypeError: Cannot read property '3' of undefined
-
-      24 |   const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === '*')
-      25 |   const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === '*'
-    > 26 |   const hasDiagonalTopRightNeighbor = board[row + 1][col + 1] === '*'
-         |                                                     ^
-      27 | 
-      28 |   if (hasDiagonalTopRightNeighbor) return 1
-      29 |   if (hasDiagonalTopLeftNeighbor) return 1
-
-      at Object.getNumOfNeighbors (gol.ts:26:53)
-      at Object.<anonymous> (gol.test.ts:56:20)
-
-  ● getNumOfNeighbors › position 0, 1 should return 1 when has 1 neighbor on the left
-
-    TypeError: Cannot read property '2' of undefined
-
-      24 |   const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === '*')
-      25 |   const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === '*'
-    > 26 |   const hasDiagonalTopRightNeighbor = board[row + 1][col + 1] === '*'
-         |                                                     ^
-      27 | 
-      28 |   if (hasDiagonalTopRightNeighbor) return 1
-      29 |   if (hasDiagonalTopLeftNeighbor) return 1
-
-      at Object.getNumOfNeighbors (gol.ts:26:53)
-      at Object.<anonymous> (gol.test.ts:67:20)
-
-  ● getNumOfNeighbors › position 0, 2 should return 1 when has 1 neighbor on the left
-
-    TypeError: Cannot read property '3' of undefined
-
-      24 |   const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === '*')
-      25 |   const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === '*'
-    > 26 |   const hasDiagonalTopRightNeighbor = board[row + 1][col + 1] === '*'
-         |                                                     ^
-      27 | 
-      28 |   if (hasDiagonalTopRightNeighbor) return 1
-      29 |   if (hasDiagonalTopLeftNeighbor) return 1
-
-      at Object.getNumOfNeighbors (gol.ts:26:53)
-      at Object.<anonymous> (gol.test.ts:78:20)
-
-  ● getNumOfNeighbors › position 1, 0 should return 1 when has 1 neighbor on the top
-
-    TypeError: Cannot read property '1' of undefined
-
-      24 |   const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === '*')
-      25 |   const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === '*'
-    > 26 |   const hasDiagonalTopRightNeighbor = board[row + 1][col + 1] === '*'
-         |                                                     ^
-      27 | 
-      28 |   if (hasDiagonalTopRightNeighbor) return 1
-      29 |   if (hasDiagonalTopLeftNeighbor) return 1
-
-      at Object.getNumOfNeighbors (gol.ts:26:53)
-      at Object.<anonymous> (gol.test.ts:128:20)
-
-  ● getNumOfNeighbors › position 2, 0 should return 1 when has 1 neighbor on the top
-
-    TypeError: Cannot read property '1' of undefined
-
-      24 |   const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === '*')
-      25 |   const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === '*'
-    > 26 |   const hasDiagonalTopRightNeighbor = board[row + 1][col + 1] === '*'
-         |                                                     ^
-      27 | 
-      28 |   if (hasDiagonalTopRightNeighbor) return 1
-      29 |   if (hasDiagonalTopLeftNeighbor) return 1
-
-      at Object.getNumOfNeighbors (gol.ts:26:53)
-      at Object.<anonymous> (gol.test.ts:141:20)
-
-  ● getNumOfNeighbors › position 2, 1 should return 1 when has 1 neighbor on the top
-
-    TypeError: Cannot read property '2' of undefined
-
-      24 |   const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === '*')
-      25 |   const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === '*'
-    > 26 |   const hasDiagonalTopRightNeighbor = board[row + 1][col + 1] === '*'
-         |                                                     ^
-      27 | 
-      28 |   if (hasDiagonalTopRightNeighbor) return 1
-      29 |   if (hasDiagonalTopLeftNeighbor) return 1
-
-      at Object.getNumOfNeighbors (gol.ts:26:53)
-      at Object.<anonymous> (gol.test.ts:154:20)
-
-  ● getNumOfNeighbors › position 1, 1 should return 1 when has 1 neighbor on diagonal top left
-
-    TypeError: Cannot read property '2' of undefined
-
-      24 |   const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === '*')
-      25 |   const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === '*'
-    > 26 |   const hasDiagonalTopRightNeighbor = board[row + 1][col + 1] === '*'
-         |                                                     ^
-      27 | 
-      28 |   if (hasDiagonalTopRightNeighbor) return 1
-      29 |   if (hasDiagonalTopLeftNeighbor) return 1
-
-      at Object.getNumOfNeighbors (gol.ts:26:53)
-      at Object.<anonymous> (gol.test.ts:166:20)
-
-  ● getNumOfNeighbors › position 2, 2 should return 1 when has 1 neighbor on diagonal top left
-
-    TypeError: Cannot read property '3' of undefined
-
-      24 |   const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === '*')
-      25 |   const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === '*'
-    > 26 |   const hasDiagonalTopRightNeighbor = board[row + 1][col + 1] === '*'
-         |                                                     ^
-      27 | 
-      28 |   if (hasDiagonalTopRightNeighbor) return 1
-      29 |   if (hasDiagonalTopLeftNeighbor) return 1
-
-      at Object.getNumOfNeighbors (gol.ts:26:53)
-      at Object.<anonymous> (gol.test.ts:179:20)
+    ✓ position 1, 0 should return 1 when has 1 neighbor on the bottom (1 ms)
+    ✓ position 1, 1 should return 1 when has 1 neighbor on the bottom (3 ms)
+    ✓ position 1, 0 should return 1 when has 1 neighbor on the top (1 ms)
+    ✓ position 2, 0 should return 1 when has 1 neighbor on the top
+    ✓ position 2, 1 should return 1 when has 1 neighbor on the top
+    ✓ position 1, 1 should return 1 when has 1 neighbor on diagonal top left (1 ms)
+    ✓ position 2, 2 should return 1 when has 1 neighbor on diagonal top left
+    ✕ position 1, 0 should return 1 when has 1 neighbor on diagonal top right (4 ms)
 
   ● getNumOfNeighbors › position 1, 0 should return 1 when has 1 neighbor on diagonal top right
 
     TypeError: Cannot read property '1' of undefined
 
-      24 |   const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === '*')
-      25 |   const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === '*'
-    > 26 |   const hasDiagonalTopRightNeighbor = board[row + 1][col + 1] === '*'
-         |                                                     ^
-      27 | 
-      28 |   if (hasDiagonalTopRightNeighbor) return 1
-      29 |   if (hasDiagonalTopLeftNeighbor) return 1
+      25 |   const hasTopNeighbor = (hasSpaceAbove && board[row - 1][col] === '*')
+      26 |   const hasDiagonalTopLeftNeighbor = hasSpaceAbove && board[row - 1][col - 1] === '*'
+    > 27 |   const hasDiagonalTopRightNeighbor = hasSpaceAbove && hasSpaceRight && board[row + 1][col + 1] === '*'
+         |                                                                                       ^
+      28 | 
+      29 |   if (hasDiagonalTopRightNeighbor) return 1
+      30 |   if (hasDiagonalTopLeftNeighbor) return 1
 
-      at Object.getNumOfNeighbors (gol.ts:26:53)
+      at Object.getNumOfNeighbors (gol.ts:27:87)
       at Object.<anonymous> (gol.test.ts:191:20)
 
 Test Suites: 1 failed, 1 total
-Tests:       11 failed, 7 passed, 18 total
+Tests:       1 failed, 17 passed, 18 total
 Snapshots:   0 total
-Time:        3.83 s
+Time:        3.819 s
 Ran all test suites.
 npm ERR! code ELIFECYCLE
 npm ERR! errno 1
@@ -199,4 +49,4 @@ npm ERR! Failed at the @ test script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2021-11-13T15_04_51_786Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2021-11-13T15_06_28_291Z-debug.log
