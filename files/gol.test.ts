@@ -250,7 +250,18 @@ describe('createBoard', () => {
 
 describe('gameOfLife', () => {
   it.skip('horizontal line should return vertical line for next generation', () => {
-    
+    const expectedBoard = '........\n' +
+                          '...**...\n' +
+                          '...***..\n' +
+                          '....*...\n';
+                          
+    const initialBoard = '...\n' +
+                         '***\n' +
+                         '...\n';
+                         
+    const board = createBoard(initialBoard);
+
+    expect(gameOfLife(board)).toBe(expectedBoard);
   });
   
   it.skip('example 1', () => {
