@@ -2,8 +2,7 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.ts(51,16): error TS2339: Property 'map' does not exist on type 'number'.
-gol.ts(51,21): error TS7006: Parameter 'vCol' implicitly has an 'any' type.
-gol.ts(51,27): error TS7006: Parameter 'col' implicitly has an 'any' type.
-gol.ts(52,21): error TS2367: This condition will always return 'false' since the types 'string[]' and 'string' have no overlap.
-gol.ts(52,27): error TS2695: Left side of comma operator is unused and has no side effects.
+
+> @ test /sandbox
+> jest --maxWorkers=2
+
