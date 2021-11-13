@@ -193,9 +193,8 @@ describe('getNumOfNeighbors', () => {
     expect(result).toEqual(1)
   });
   
-  it('position 2, 0 should return 1 when has 1 neighbor on diagonal top right', () => {
+  it('position 0, 1 should return 1 when has 1 neighbor on diagonal bottom left', () => {
     const board = [
-      ['', ''],
       ['', '*'],
       ['*', ''],
     ];
