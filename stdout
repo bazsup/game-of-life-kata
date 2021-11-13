@@ -2,4 +2,6 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.test.ts(18,27): error TS2554: Expected 1 arguments, but got 2.
+gol.test.ts(5,12): error TS2554: Expected 2 arguments, but got 1.
+gol.test.ts(9,12): error TS2554: Expected 2 arguments, but got 1.
+gol.test.ts(13,12): error TS2554: Expected 2 arguments, but got 1.
