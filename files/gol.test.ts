@@ -14,6 +14,7 @@ describe('isCellAlive', () => {
   });
   
   it('a dead cell should still die when has 2 neighbors', () => {
-    expect(isCellAlive(2)).toEqual(false);
+    const isAlive = false
+    expect(isCellAlive(2, isAlive)).toEqual(false);
   });
 });
