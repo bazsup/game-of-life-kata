@@ -2,5 +2,7 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.ts(22,7): error TS2367: This condition will always return 'false' since the types 'boolean' and 'string' have no overlap.
-gol.ts(22,28): error TS2363: The right-hand side of an arithmetic operation must be of type 'any', 'number', 'bigint' or an enum type.
+
+> @ test /sandbox
+> jest --maxWorkers=2
+
