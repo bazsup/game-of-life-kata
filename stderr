@@ -1,35 +1,66 @@
-PASS ./gol.test.ts
+FAIL ./gol.test.ts
   isCellAlive
     ✓ an alive cell should be die when has no neighbor (3 ms)
-    ✓ an alive cell should still alive when has 2 neighbors
-    ✓ a dead cell should be alive when has 3 neighbors (1 ms)
+    ✓ an alive cell should still alive when has 2 neighbors (1 ms)
+    ✓ a dead cell should be alive when has 3 neighbors
     ✓ a dead cell should still die when has 2 neighbors
   getNumOfNeighbors
     ✓ should has no neighbor
     ✓ position 0, 0 should return 1 when has 1 neighbor on the right
-    ✓ position 0, 2 should return 1 when has 1 neighbor on the right
+    ✓ position 0, 2 should return 1 when has 1 neighbor on the right (1 ms)
     ✓ position 0, 1 should return 1 when has 1 neighbor on the left
-    ✓ position 0, 2 should return 1 when has 1 neighbor on the left (1 ms)
+    ✓ position 0, 2 should return 1 when has 1 neighbor on the left
     ✓ position 0, 0 should return 1 when has 1 neighbor on the bottom
     ✓ position 1, 0 should return 1 when has 1 neighbor on the bottom
     ✓ position 1, 1 should return 1 when has 1 neighbor on the bottom
-    ✓ position 1, 0 should return 1 when has 1 neighbor on the top (1 ms)
-    ✓ position 2, 0 should return 1 when has 1 neighbor on the top
+    ✓ position 1, 0 should return 1 when has 1 neighbor on the top
+    ✓ position 2, 0 should return 1 when has 1 neighbor on the top (1 ms)
     ✓ position 2, 1 should return 1 when has 1 neighbor on the top
     ✓ position 1, 1 should return 1 when has 1 neighbor on diagonal top left
-    ✓ position 2, 2 should return 1 when has 1 neighbor on diagonal top left (1 ms)
+    ✓ position 2, 2 should return 1 when has 1 neighbor on diagonal top left
     ✓ position 1, 0 should return 1 when has 1 neighbor on diagonal top right
     ✓ position 0, 1 should return 1 when has 1 neighbor on diagonal bottom left
     ✓ position 0, 0 should return 1 when has 1 neighbor on diagonal bottom right
-    ✓ position 1, 1 should return 8 when has 8 neighbors around (1 ms)
+    ✓ position 1, 1 should return 8 when has 8 neighbors around
   createBoard
-    ✓ should create a board from string
+    ✓ should create a board from string (1 ms)
   gameOfLife
-    ○ skipped horizontal line should return vertical line for next generation
+    ✕ horizontal line should return vertical line for next generation (3 ms)
     ○ skipped example 1
 
-Test Suites: 1 passed, 1 total
-Tests:       2 skipped, 22 passed, 24 total
+  ● gameOfLife › horizontal line should return vertical line for next generation
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: "........
+    ...**...
+    ...***..
+    ....*...
+    "
+    Received: [[]]
+
+      262 |     const board = createBoard(initialBoard);
+      263 | 
+    > 264 |     expect(gameOfLife(board)).toBe(expectedBoard);
+          |                               ^
+      265 |   });
+      266 |   
+      267 |   it.skip('example 1', () => {
+
+      at Object.<anonymous> (gol.test.ts:264:31)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 skipped, 22 passed, 24 total
 Snapshots:   0 total
-Time:        3.641 s
+Time:        3.731 s
 Ran all test suites.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ test: `jest --maxWorkers=2`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2021-11-13T15_45_07_816Z-debug.log

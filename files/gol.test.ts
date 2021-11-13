@@ -249,7 +249,7 @@ describe('createBoard', () => {
 });
 
 describe('gameOfLife', () => {
-  it.skip('horizontal line should return vertical line for next generation', () => {
+  it('horizontal line should return vertical line for next generation', () => {
     const expectedBoard = '........\n' +
                           '...**...\n' +
                           '...***..\n' +
