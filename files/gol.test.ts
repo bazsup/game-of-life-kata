@@ -244,14 +244,14 @@ const createBoard = (boardString) => {
 describe('createBoard', () => {
   it('should create a board from string', () => {
     const result = createBoard('*.\n' + '.*')
-    expect(result).toBe([['*', '.'], ['.', '*']]
+    expect(result).toBe([['*', '.'], ['.', '*']])
   });
 });
 
 describe('gameOfLife', () => {
   it.skip('horizontal line should return vertical line for next generation', () => {
     
-  };
+  });
   
   it.skip('example 1', () => {
   

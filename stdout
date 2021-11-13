@@ -2,5 +2,7 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.test.ts(248,3): error TS1005: ',' expected.
-gol.test.ts(254,4): error TS1005: ')' expected.
+gol.test.ts(236,22): error TS7006: Parameter 'boardString' implicitly has an 'any' type.
+gol.test.ts(238,25): error TS7006: Parameter 'row' implicitly has an 'any' type.
+gol.test.ts(269,43): error TS2554: Expected 1 arguments, but got 2.
+gol.test.ts(271,12): error TS2304: Cannot find name 'gameOfLife'.
