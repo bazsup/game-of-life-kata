@@ -3,6 +3,6 @@
   "colour": "on",
   "predict": "on",
   "revert_red": "on",
-  "revert_amber": "off",
+  "revert_amber": "on",
   "revert_green": "off"
 }
