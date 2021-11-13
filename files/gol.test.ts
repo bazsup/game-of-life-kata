@@ -287,4 +287,25 @@ describe('gameOfLife', () => {
     expect(nextGen).toEqual(expectedUniverse);
   });
   
+  it('example 2', () => {
+    const expectedUniverse = '........\n' +
+                             '.....*..\n' +
+                             '..*..*..\n' +
+                             '..***...\n' +
+                             '........';
+                             
+    const initialUniverse = '........\n' +
+                            '...**...\n' +
+                            '.*****..\n' +
+                            '........\n' +
+                            '........';
+                         
+    const universe = createUniverse(initialUniverse);
+
+    const nextGen = convertUniverseToString(gameOfLife(universe))
+
+    expect(nextGen).toEqual(expectedUniverse);
+  });
+  
+  
 });
