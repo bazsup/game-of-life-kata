@@ -2,6 +2,7 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.test.ts(5,12): error TS2554: Expected 2 arguments, but got 1.
-gol.test.ts(9,12): error TS2554: Expected 2 arguments, but got 1.
-gol.test.ts(13,12): error TS2554: Expected 2 arguments, but got 1.
+
+> @ test /sandbox
+> jest --maxWorkers=2
+
