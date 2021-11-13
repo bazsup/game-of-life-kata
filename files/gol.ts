@@ -47,5 +47,5 @@ export function getNumOfNeighbors(board: string[][], position: Position): number
 }
 
 export function gameOfLife(board: Board): Board {
-
+  return [[]]
 }

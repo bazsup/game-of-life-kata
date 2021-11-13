@@ -2,6 +2,5 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.test.ts(269,43): error TS2554: Expected 1 arguments, but got 2.
-gol.test.ts(271,12): error TS2304: Cannot find name 'gameOfLife'.
-gol.ts(49,43): error TS2355: A function whose declared type is neither 'void' nor 'any' must return a value.
+gol.test.ts(269,23): error TS2304: Cannot find name 'boardSize'.
+gol.test.ts(269,34): error TS2554: Expected 1 arguments, but got 2.

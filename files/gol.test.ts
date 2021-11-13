@@ -1,4 +1,4 @@
-import { isCellAlive, getNumOfNeighbors, Position, Board } from './gol';
+import { isCellAlive, getNumOfNeighbors, gameOfLife, Position, Board } from './gol';
 
 describe('isCellAlive', () => {
   it('an alive cell should be die when has no neighbor', () => {
@@ -254,8 +254,6 @@ describe('gameOfLife', () => {
   });
   
   it.skip('example 1', () => {
-  
-  const boardSize: Position = { row: 4, col: 8 };
     const expectedBoard = '........\n' +
                      '...**...\n' +
                      '...***..\n' +
@@ -266,7 +264,7 @@ describe('gameOfLife', () => {
                          '...**...\n' +
                          '.....*..';
 
-    const board = createBoard(boardSize,  initialBoard);
+    const board = createBoard(initialBoard);
 
     expect(gameOfLife(boardSize, board)).toBe(expectedBoard);
   });
