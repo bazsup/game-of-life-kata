@@ -2,4 +2,7 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.ts(1,29): error TS7006: Parameter 'numOfNeighbors' implicitly has an 'any' type.
+
+> @ test /sandbox
+> jest --maxWorkers=2
+

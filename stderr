@@ -1,10 +1,36 @@
+FAIL ./gol.test.ts
+  isCellAlive
+    ✕ should be alive when has two neighbors (8 ms)
+
+  ● isCellAlive › should be alive when has two neighbors
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: true
+    Received: false
+
+       7 |   
+       8 |   it('should be alive when has two neighbors', () => {
+    >  9 |     expect(isCellAlive(2)).toEqual(true);
+         |                            ^
+      10 |   });
+      11 | });
+      12 | 
+
+      at Object.<anonymous> (gol.test.ts:9:28)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        3.664 s
+Ran all test suites.
 npm ERR! code ELIFECYCLE
-npm ERR! errno 2
-npm ERR! @ typecheck: `tsc --noEmit`
-npm ERR! Exit status 2
+npm ERR! errno 1
+npm ERR! @ test: `jest --maxWorkers=2`
+npm ERR! Exit status 1
 npm ERR! 
-npm ERR! Failed at the @ typecheck script.
+npm ERR! Failed at the @ test script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2021-11-13T13_35_59_044Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2021-11-13T13_36_21_606Z-debug.log
