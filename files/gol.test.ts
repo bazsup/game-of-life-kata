@@ -1,4 +1,4 @@
-import { isCellAlive, getNumOfNeighbors } from './gol';
+import { isCellAlive } from './gol';
 
 describe('isCellAlive', () => {
   it('an alive cell should be die when has no neighbor', () => {
