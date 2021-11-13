@@ -1,7 +1,7 @@
 import { isCellAlive } from './gol';
 
 describe('isCellAlive', () => {
-  it('should be die when has no neighbor', () => {
+  it.skip('should be die when has no neighbor', () => {
     expect(isCellAlive()).toEqual(false);
   });
   
