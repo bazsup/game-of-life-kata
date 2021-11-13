@@ -227,7 +227,7 @@ describe('getNumOfNeighbors', () => {
 
     const result = getNumOfNeighbors(board, position)
     
-    expect(result).toEqual(1)
+    expect(result).toEqual(8)
   });
 
 })
