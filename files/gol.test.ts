@@ -25,8 +25,7 @@ describe('isCellAlive', () => {
 
 describe('getNumOfNeighbors', () => {
   
-  
-  it('should be 0 for 1x1 board', () => {
+  it('should has no neighbor', () => {
     const board = [
       ['*']
     ];
@@ -35,6 +34,17 @@ describe('getNumOfNeighbors', () => {
     const result = getNumOfNeighbors(board, position)
     
     expect(result).toEqual(0)
+  });
+  
+  it('should has 1 neighbor', () => {
+    const board = [
+      ['*', '*']
+    ];
+    const position: Position = {row: 0, col: 0}
+
+    const result = getNumOfNeighbors(board, position)
+    
+    expect(result).toEqual(1)
   });
 
 })
