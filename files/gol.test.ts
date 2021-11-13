@@ -155,5 +155,17 @@ describe('getNumOfNeighbors', () => {
     
     expect(result).toEqual(1)
   });
+  
+  it('position 1, 1 should return 1 when has 1 neighbor on diagonal top left', () => {
+    const board = [
+      ['*', ''],
+      ['', '*'],
+    ];
+    const position: Position = {row: 1, col: 1}
+
+    const result = getNumOfNeighbors(board, position)
+    
+    expect(result).toEqual(1)
+  });
 
 })
