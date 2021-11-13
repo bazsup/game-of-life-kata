@@ -2,4 +2,4 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.test.ts(9,24): error TS2554: Expected 0 arguments, but got 1.
+gol.ts(1,29): error TS7006: Parameter 'numOfNeighbors' implicitly has an 'any' type.

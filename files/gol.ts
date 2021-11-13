@@ -1,3 +1,3 @@
-export function isCellAlive(): boolean {
+export function isCellAlive(numOfNeighbors): boolean {
   return false;
 }
