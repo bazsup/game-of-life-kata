@@ -51,7 +51,7 @@ export function gameOfLife(board: Board): Board {
     return row.map(col => {
       const alive = board[row, col] === '*'
       const numOfNeighbors = getNumOfNeighbors(board, {row, col})
-      return isCellAlive(numOfNeighbors, alive)
+      return isCellAlive(numOfNeighbors, alive) ? '*' : '.'
     })
   });
   return newBoard
