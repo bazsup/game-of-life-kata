@@ -14,5 +14,5 @@ export interface Position {
 }
 
 export function getNumOfNeighbors(board: string[][], position: Position): number {
-  return 1;
+  return 0;
 }
