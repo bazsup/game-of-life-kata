@@ -1,3 +1,3 @@
-export function answer(): number {
-  return 6 * 9;
+export function answer(): boolean {
+  return true;
 }

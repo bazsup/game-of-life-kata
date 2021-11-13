@@ -1,8 +1,8 @@
 import { answer } from './gol';
 
-describe('answer', () => {
-  it('to life the universe and everything', () => {
-    expect(answer()).toEqual(42);
+describe('isCellAlive', () => {
+  it('should be die when has no number of neighbor', () => {
+    expect(answer()).toEqual(false);
     
   });
 });
