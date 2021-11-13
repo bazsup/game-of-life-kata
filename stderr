@@ -1,29 +1,30 @@
 PASS ./gol.test.ts
   isCellAlive
-    ✓ an alive cell should be die when has no neighbor (2 ms)
+    ✓ an alive cell should be die when has no neighbor (6 ms)
     ✓ an alive cell should still alive when has 2 neighbors (1 ms)
     ✓ a dead cell should be alive when has 3 neighbors
-    ✓ a dead cell should still die when has 2 neighbors
+    ✓ a dead cell should still die when has 2 neighbors (1 ms)
   getNumOfNeighbors
     ✓ should has no neighbor
     ✓ position 0, 0 should return 1 when has 1 neighbor on the right
-    ✓ position 0, 2 should return 1 when has 1 neighbor on the right (1 ms)
-    ✓ position 0, 1 should return 1 when has 1 neighbor on the left
+    ✓ position 0, 2 should return 1 when has 1 neighbor on the right
+    ✓ position 0, 1 should return 1 when has 1 neighbor on the left (1 ms)
     ✓ position 0, 2 should return 1 when has 1 neighbor on the left
     ✓ position 0, 0 should return 1 when has 1 neighbor on the bottom
-    ✓ position 1, 0 should return 1 when has 1 neighbor on the bottom (1 ms)
-    ✓ position 1, 1 should return 1 when has 1 neighbor on the bottom
-    ✓ position 1, 0 should return 1 when has 1 neighbor on the top (4 ms)
+    ✓ position 1, 0 should return 1 when has 1 neighbor on the bottom
+    ✓ position 1, 1 should return 1 when has 1 neighbor on the bottom (1 ms)
+    ✓ position 1, 0 should return 1 when has 1 neighbor on the top
     ✓ position 2, 0 should return 1 when has 1 neighbor on the top
     ✓ position 2, 1 should return 1 when has 1 neighbor on the top
     ✓ position 1, 1 should return 1 when has 1 neighbor on diagonal top left
     ✓ position 2, 2 should return 1 when has 1 neighbor on diagonal top left (1 ms)
     ✓ position 1, 0 should return 1 when has 1 neighbor on diagonal top right
     ✓ position 0, 1 should return 1 when has 1 neighbor on diagonal bottom left
-    ✓ position 0, 0 should return 1 when has 1 neighbor on diagonal bottom right
+    ✓ position 0, 0 should return 1 when has 1 neighbor on diagonal bottom right (1 ms)
+    ✓ position 1, 1 should return 8 when has 8 neighbors around
 
 Test Suites: 1 passed, 1 total
-Tests:       20 passed, 20 total
+Tests:       21 passed, 21 total
 Snapshots:   0 total
-Time:        3.922 s
+Time:        3.674 s
 Ran all test suites.

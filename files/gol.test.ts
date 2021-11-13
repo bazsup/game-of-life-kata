@@ -216,5 +216,18 @@ describe('getNumOfNeighbors', () => {
     
     expect(result).toEqual(1)
   });
+  
+  it('position 1, 1 should return 8 when has 8 neighbors around', () => {
+    const board = [
+      ['*', '*', '*'],
+      ['*', '*', '*'],
+      ['*', '*', '*'],
+    ];
+    const position: Position = {row: 1, col: 1}
+
+    const result = getNumOfNeighbors(board, position)
+    
+    expect(result).toEqual(1)
+  });
 
 })
