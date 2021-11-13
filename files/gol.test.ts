@@ -91,5 +91,18 @@ describe('getNumOfNeighbors', () => {
     
     expect(result).toEqual(1)
   });
+  
+  it('position 1, 0 should return 1 when has 1 neighbor below', () => {
+    const board = [
+      [''],
+      ['*'],
+      ['*'],
+    ];
+    const position: Position = {row: 1, col: 0}
+
+    const result = getNumOfNeighbors(board, position)
+    
+    expect(result).toEqual(1)
+  });
 
 })
