@@ -717,5 +717,21 @@
       53,
       739020
     ]
+  },
+  {
+    "duration": 8.877272,
+    "colour": "red",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 45,
+    "time": [
+      2021,
+      11,
+      13,
+      14,
+      12,
+      14,
+      603308
+    ]
   }
 ]
