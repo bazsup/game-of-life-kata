@@ -2,7 +2,8 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
+gol.ts(51,16): error TS2339: Property 'map' does not exist on type 'number'.
+gol.ts(51,21): error TS7006: Parameter 'vCol' implicitly has an 'any' type.
+gol.ts(51,27): error TS7006: Parameter 'col' implicitly has an 'any' type.
+gol.ts(52,21): error TS2367: This condition will always return 'false' since the types 'string[]' and 'string' have no overlap.
 gol.ts(52,27): error TS2695: Left side of comma operator is unused and has no side effects.
-gol.ts(52,27): error TS7015: Element implicitly has an 'any' type because index expression is not of type 'number'.
-gol.ts(53,56): error TS2322: Type 'string[]' is not assignable to type 'number'.
-gol.ts(53,61): error TS2322: Type 'string' is not assignable to type 'number'.
