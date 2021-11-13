@@ -109,7 +109,6 @@ describe('getNumOfNeighbors', () => {
     const board = [
       ['*'],
       ['*'],
-      [''],
     ];
     const position: Position = {row: 1, col: 0}
 
