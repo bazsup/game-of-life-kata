@@ -2,5 +2,7 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.test.ts(33,33): error TS2322: Type '{ row: number; col: number; }' is not assignable to type 'Position'.
-  Object literal may only specify known properties, and 'row' does not exist in type 'Position'.
+
+> @ test /sandbox
+> jest --maxWorkers=2
+
