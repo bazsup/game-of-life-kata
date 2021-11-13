@@ -233,12 +233,12 @@ describe('getNumOfNeighbors', () => {
 });
 
 
-const createBoard = (universeString: string): Universe => {
+const createUniverse = (universeString: string): Universe => {
  const rows = universeString.split('\n')
- const board = rows.map(row => {
+ const universe = rows.map(row => {
     return row.split('')
  });
- return board
+ return universe
 }
 
 describe('createUniverse', () => {
@@ -262,27 +262,27 @@ describe('gameOfLife', () => {
                             '***\n' +
                             '...';
                          
-    const board = createBoard(initialBoard);
+    const universe = createUniverse(initialUniverse);
 
-    const nextGen = convertUniverseToString(gameOfLife(board))
+    const nextGen = convertUniverseToString(gameOfLife(universe))
 
-    expect(gameOfLife(board).join()).toBe(expectedBoard);
+    expect(nextGen).toBe(expectedUniverse);
   });
   
   it.skip('example 1', () => {
-    const expectedBoard = '........\n' +
+    const expectedUniverse = '........\n' +
                      '...**...\n' +
                      '...***..\n' +
                      '....*...\n';
 
-    const initialBoard = '........\n' +
+    const initialUniverse = '........\n' +
                          '....*...\n' +
                          '...**...\n' +
                          '.....*..';
 
-    const board = createBoard(initialBoard);
+    const nextGen = convertUniverseToString(gameOfLife(universe))
 
-    expect(gameOfLife(board)).toBe(expectedBoard);
+    expect(nextGen).toBe(expectedUniverse);
   });
   
 });
