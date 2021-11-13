@@ -47,5 +47,12 @@ export function getNumOfNeighbors(board: string[][], position: Position): number
 }
 
 export function gameOfLife(board: Board): Board {
-  return [[]]
+  const newBoard = board.map((row) => {
+    return row.map(col => {
+      const alive = board[row, col] === '*'
+      const numOfNeighbors = getNumOfNeighbors(board, {row, col})
+      return isCellAlive(numOfNeighbors, alive)
+    })
+  });
+  return newBoard
 }

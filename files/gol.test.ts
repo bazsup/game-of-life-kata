@@ -250,10 +250,9 @@ describe('createBoard', () => {
 
 describe('gameOfLife', () => {
   it('horizontal line should return vertical line for next generation', () => {
-    const expectedBoard = '........\n' +
-                          '...**...\n' +
-                          '...***..\n' +
-                          '....*...\n';
+    const expectedBoard = '.*.\n' +
+                          '.*.\n' +
+                          '.*.\n';
                           
     const initialBoard = '...\n' +
                          '***\n' +
