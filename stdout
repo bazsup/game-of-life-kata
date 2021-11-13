@@ -2,7 +2,4 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-
-> @ test /sandbox
-> jest --maxWorkers=2
-
+gol.test.ts(34,20): error TS2304: Cannot find name 'getNumOfNeighbors'.

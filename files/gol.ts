@@ -7,3 +7,4 @@ export function isCellAlive(numOfNeighbors: number, isAlive: boolean): boolean {
   
   return false;
 }
+

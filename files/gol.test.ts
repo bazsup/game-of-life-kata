@@ -22,3 +22,18 @@ describe('isCellAlive', () => {
   });
  
 });
+
+describe('getNumOfNeighbors', () => {
+  
+  
+  it('should be 0 for 1x1 board', () => {
+    const board = [
+      ['*']
+    ];
+
+    const result = getNumOfNeighbors(board, {row: 0, col: 0})
+    
+    expect(result).toEqual(0)
+  });
+
+})
