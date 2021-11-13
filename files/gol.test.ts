@@ -266,14 +266,14 @@ describe('gameOfLife', () => {
 
     const nextGen = convertUniverseToString(gameOfLife(universe))
 
-    expect(nextGen).toBe(expectedUniverse);
+    expect(nextGen).toEqual(expectedUniverse);
   });
   
   it('example 1', () => {
     const expectedUniverse = '........\n' +
                      '...**...\n' +
                      '...***..\n' +
-                     '....*...\n';
+                     '....*...';
 
     const initialUniverse = '........\n' +
                          '....*...\n' +
@@ -284,7 +284,7 @@ describe('gameOfLife', () => {
 
     const nextGen = convertUniverseToString(gameOfLife(universe))
 
-    expect(nextGen).toBe(expectedUniverse);
+    expect(nextGen).toEqual(expectedUniverse);
   });
   
 });
