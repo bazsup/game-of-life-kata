@@ -1,7 +1,7 @@
 PASS ./gol.test.ts
   isCellAlive
-    ✓ an alive cell should be die when has no neighbor (7 ms)
-    ✓ an alive cell should still alive when has 2 neighbors (1 ms)
+    ✓ an alive cell should be die when has no neighbor (3 ms)
+    ✓ an alive cell should still alive when has 2 neighbors
     ✓ a dead cell should be alive when has 3 neighbors
     ✓ a dead cell should still die when has 2 neighbors
   getNumOfNeighbors
@@ -22,5 +22,5 @@ PASS ./gol.test.ts
 Test Suites: 1 passed, 1 total
 Tests:       17 passed, 17 total
 Snapshots:   0 total
-Time:        3.531 s
+Time:        3.662 s
 Ran all test suites.

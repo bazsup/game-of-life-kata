@@ -15,14 +15,15 @@ export interface Position {
 
 export function getNumOfNeighbors(board: string[][], position: Position): number {
   const { row, col } = position
+  const hasSpaceBelow = board.length > row + 1
+  
   const hasRightNeighbor = board[row][col + 1] === '*'
   const hasLeftNeighbor = board[row][col - 1] === '*'
-  const hasBottomNeighbor = (board.length > row + 1 && board[row + 1][col] === '*')
+  const hasBottomNeighbor = (hasSpaceBelow && board[row + 1][col] === '*')
   const hasTopNeighbor = (row - 1 >= 0 && board[row - 1][col] === '*')
+  const hasDiagonalTopLeftNeighbor = row - 1 >= 0 && col - 1 >= 0 && board[row - 1][col - 1] === '*'
 
-  if (
-    row - 1 >= 0 && col - 1 >= 0 && board[row - 1][col - 1] === '*'
-  ) return 1
+  if (hasDiagonalTopLeftNeighbor) return 1
   if (hasTopNeighbor) return 1
   if (hasBottomNeighbor) return 1
   if (hasLeftNeighbor) return 1
