@@ -279,6 +279,8 @@ describe('gameOfLife', () => {
                          '....*...\n' +
                          '...**...\n' +
                          '.....*..';
+                         
+    const universe = createUniverse(initialUniverse);
 
     const nextGen = convertUniverseToString(gameOfLife(universe))
 

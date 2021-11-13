@@ -2,4 +2,7 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.test.ts(283,56): error TS2304: Cannot find name 'universe'.
+
+> @ test /sandbox
+> jest --maxWorkers=2
+
