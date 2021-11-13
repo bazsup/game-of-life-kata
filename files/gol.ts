@@ -22,7 +22,7 @@ export function getNumOfNeighbors(board: string[][], position: Position): number
 
   if (
     (board.length > 1 && board[0][0] === '*') ||
-    (board.length > 2 && board[1][1] === '*'
+    (board.length > 2 && board[1][1] === '*')
   ) return 1
   if (hasTopNeighbor) return 1
   if (hasBottomNeighbor) return 1

@@ -2,4 +2,7 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.ts(26,5): error TS1005: ')' expected.
+
+> @ test /sandbox
+> jest --maxWorkers=2
+
