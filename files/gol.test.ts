@@ -11,7 +11,7 @@ describe('isCellAlive', () => {
     expect(isCellAlive(2, isAlive)).toEqual(true);
   });
   
-  it('should be die when has 3 neighbors', () => {
+  it('should be alive when has 3 neighbors', () => {
     const isAlive = false
     expect(isCellAlive(3, isAlive)).toEqual(true);
   });

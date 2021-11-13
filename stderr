@@ -1,35 +1,18 @@
 FAIL ./gol.test.ts
   isCellAlive
     ✓ should be die when has no neighbor (3 ms)
-    ✕ should be alive when has 2 neighbors (2 ms)
-    ✕ should be die when has 3 neighbors (1 ms)
-    ✓ a dead cell should still die when has 2 neighbors
+    ✓ should be alive when has 2 neighbors
+    ✕ should be alive when has 3 neighbors (3 ms)
+    ✕ a dead cell should still die when has 2 neighbors (1 ms)
 
-  ● isCellAlive › should be alive when has 2 neighbors
-
-    expect(received).toEqual(expected) // deep equality
-
-    Expected: true
-    Received: false
-
-       9 |   it('should be alive when has 2 neighbors', () => {
-      10 |     const isAlive = false
-    > 11 |     expect(isCellAlive(2, isAlive)).toEqual(true);
-         |                                     ^
-      12 |   });
-      13 |   
-      14 |   it('should be die when has 3 neighbors', () => {
-
-      at Object.<anonymous> (gol.test.ts:11:37)
-
-  ● isCellAlive › should be die when has 3 neighbors
+  ● isCellAlive › should be alive when has 3 neighbors
 
     expect(received).toEqual(expected) // deep equality
 
     Expected: true
     Received: false
 
-      14 |   it('should be die when has 3 neighbors', () => {
+      14 |   it('should be alive when has 3 neighbors', () => {
       15 |     const isAlive = false
     > 16 |     expect(isCellAlive(3, isAlive)).toEqual(true);
          |                                     ^
@@ -39,10 +22,27 @@ FAIL ./gol.test.ts
 
       at Object.<anonymous> (gol.test.ts:16:37)
 
+  ● isCellAlive › a dead cell should still die when has 2 neighbors
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: false
+    Received: true
+
+      19 |   it('a dead cell should still die when has 2 neighbors', () => {
+      20 |     const isAlive = false
+    > 21 |     expect(isCellAlive(2, isAlive)).toEqual(false);
+         |                                     ^
+      22 |   });
+      23 | });
+      24 | 
+
+      at Object.<anonymous> (gol.test.ts:21:37)
+
 Test Suites: 1 failed, 1 total
 Tests:       2 failed, 2 passed, 4 total
 Snapshots:   0 total
-Time:        3.464 s
+Time:        3.923 s
 Ran all test suites.
 npm ERR! code ELIFECYCLE
 npm ERR! errno 1
@@ -53,4 +53,4 @@ npm ERR! Failed at the @ test script.
 npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
 
 npm ERR! A complete log of this run can be found in:
-npm ERR!     /home/sandbox/.npm/_logs/2021-11-13T13_44_48_829Z-debug.log
+npm ERR!     /home/sandbox/.npm/_logs/2021-11-13T13_46_14_292Z-debug.log
