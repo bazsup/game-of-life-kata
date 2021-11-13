@@ -1,22 +1,22 @@
 PASS ./gol.test.ts
   isCellAlive
-    ✓ an alive cell should be die when has no neighbor (3 ms)
-    ✓ an alive cell should still alive when has 2 neighbors
-    ✓ a dead cell should be alive when has 3 neighbors (1 ms)
-    ✓ a dead cell should still die when has 2 neighbors
+    ✓ an alive cell should be die when has no neighbor (2 ms)
+    ✓ an alive cell should still alive when has 2 neighbors (1 ms)
+    ✓ a dead cell should be alive when has 3 neighbors
+    ✓ a dead cell should still die when has 2 neighbors (4 ms)
   getNumOfNeighbors
     ✓ should has no neighbor (1 ms)
     ✓ position 0, 0 should return 1 when has 1 neighbor on the right
-    ✓ position 0, 2 should return 1 when has 1 neighbor on the right
-    ✓ position 0, 1 should return 1 when has 1 neighbor on the left (1 ms)
+    ✓ position 0, 2 should return 1 when has 1 neighbor on the right (1 ms)
+    ✓ position 0, 1 should return 1 when has 1 neighbor on the left
     ✓ position 0, 2 should return 1 when has 1 neighbor on the left
-    ✓ position 0, 0 should return 1 when has 1 neighbor on the bottom
+    ✓ position 0, 0 should return 1 when has 1 neighbor on the bottom (1 ms)
     ✓ position 1, 0 should return 1 when has 1 neighbor on the bottom
-    ✓ position 1, 0 should return 1 when has 1 neighbor on the top (1 ms)
+    ✓ position 1, 0 should return 1 when has 1 neighbor on the top
     ✓ position 2, 0 should return 1 when has 1 neighbor on the top
 
 Test Suites: 1 passed, 1 total
 Tests:       13 passed, 13 total
 Snapshots:   0 total
-Time:        3.826 s
+Time:        3.769 s
 Ran all test suites.
