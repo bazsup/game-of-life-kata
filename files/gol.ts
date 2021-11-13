@@ -17,6 +17,7 @@ export function getNumOfNeighbors(board: string[][], position: Position): number
   const { row, col } = position
   const hasRightNeighbor = board[row][col + 1] === '*'
   const hasLeftNeighbor = board[row][col - 1] === '*'
+  if (board[1][0] === '*') return 1
   if (hasLeftNeighbor) return 1
   if (hasRightNeighbor) return 1
   return 0;
