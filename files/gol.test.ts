@@ -230,4 +230,45 @@ describe('getNumOfNeighbors', () => {
     expect(result).toEqual(8)
   });
 
-})
+});
+
+
+const createBoard = (boardString) => {
+ const rows = boardString.split('\n')
+ const board = rows.map(row => {
+    return row.split('')
+ });
+ return board
+}
+
+describe('createBoard', () => {
+  it('should create a board from string', () => {
+    const result = createBoard('*.\n' + '.*')
+    expect(result).toBe([['*', '.'], ['.', '*']]
+  });
+});
+
+describe('gameOfLife', () => {
+  it.skip('horizontal line should return vertical line for next generation', () => {
+    
+  };
+  
+  it.skip('example 1', () => {
+  
+  const boardSize = { row: 4, col: 8 };
+    const expectedBoard = '........\n' +
+                     '...**...\n' +
+                     '...***..\n' +
+                     '....*...\n';
+
+    const initialBoard = '........\n' +
+                         '....*...\n' +
+                         '...**...\n' +
+                         '.....*..';
+
+    const board = createBoard(boardSize,  initialBoard);
+
+    expect(gameOfLife(boardSize, board)).toBe(expectedBoard);
+  });
+  
+});
