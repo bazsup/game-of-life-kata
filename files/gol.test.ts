@@ -36,7 +36,7 @@ describe('getNumOfNeighbors', () => {
     expect(result).toEqual(0)
   });
   
-  it('should has 1 neighbor', () => {
+  it('should return for 1 neighbor on the right', () => {
     const board = [
       ['*', '*']
     ];
