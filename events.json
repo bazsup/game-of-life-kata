@@ -427,5 +427,21 @@
       42,
       650265
     ]
+  },
+  {
+    "duration": 8.537298,
+    "colour": "green",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 27,
+    "time": [
+      2021,
+      11,
+      13,
+      13,
+      50,
+      33,
+      433443
+    ]
   }
 ]

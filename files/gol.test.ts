@@ -20,4 +20,9 @@ describe('isCellAlive', () => {
     const isAlive = false
     expect(isCellAlive(2, isAlive)).toEqual(false);
   });
+  
+  it('an alive cell should be die when has more than 3 neighbors', () => {
+    const isAlive = true
+    expect(isCellAlive(4, isAlive)).toEqual(false);
+  });
 });
