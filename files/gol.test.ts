@@ -266,7 +266,7 @@ describe('gameOfLife', () => {
 
     const board = createBoard(initialBoard);
 
-    expect(gameOfLife(boardSize, board)).toBe(expectedBoard);
+    expect(gameOfLife(board)).toBe(expectedBoard);
   });
   
 });

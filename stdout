@@ -2,5 +2,7 @@
 > @ typecheck /sandbox
 > tsc --noEmit
 
-gol.test.ts(269,23): error TS2304: Cannot find name 'boardSize'.
-gol.test.ts(269,34): error TS2554: Expected 1 arguments, but got 2.
+
+> @ test /sandbox
+> jest --maxWorkers=2
+
