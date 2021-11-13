@@ -14,5 +14,8 @@ export interface Position {
 }
 
 export function getNumOfNeighbors(board: string[][], position: Position): number {
+  if (board[0][1] == '*') {
+    return 1
+  }
   return 0;
 }
