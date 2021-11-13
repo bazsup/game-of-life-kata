@@ -1,9 +1,10 @@
 PASS ./gol.test.ts
   isCellAlive
-    ✓ should be alive when has two neighbors (3 ms)
+    ✓ should be die when has no neighbor (4 ms)
+    ✓ should be alive when has two neighbors
 
 Test Suites: 1 passed, 1 total
-Tests:       1 passed, 1 total
+Tests:       2 passed, 2 total
 Snapshots:   0 total
-Time:        3.811 s
+Time:        3.958 s
 Ran all test suites.
