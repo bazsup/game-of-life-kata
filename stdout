@@ -3,4 +3,3 @@
 > tsc --noEmit
 
 gol.test.ts(34,20): error TS2304: Cannot find name 'getNumOfNeighbors'.
-gol.ts(11,54): error TS7006: Parameter 'position' implicitly has an 'any' type.

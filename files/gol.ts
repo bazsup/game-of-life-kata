@@ -8,6 +8,11 @@ export function isCellAlive(numOfNeighbors: number, isAlive: boolean): boolean {
   return false;
 }
 
-export function getNumOfNeighbors(board: string[][], position): number {
+interface Position {
+  x: number;
+  y: number;
+}
+
+export function getNumOfNeighbors(board: string[][], position: Position): number {
   return 1;
 }
