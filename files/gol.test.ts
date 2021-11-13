@@ -36,11 +36,22 @@ describe('getNumOfNeighbors', () => {
     expect(result).toEqual(0)
   });
   
-  it('should return for 1 neighbor on the right', () => {
+  it('should return 1 for 1 neighbor on the right', () => {
     const board = [
       ['*', '*']
     ];
     const position: Position = {row: 0, col: 0}
+
+    const result = getNumOfNeighbors(board, position)
+    
+    expect(result).toEqual(1)
+  });
+  
+  it('should return 1 for 1 neighbor on the left', () => {
+    const board = [
+      ['', '', '*', '*']
+    ];
+    const position: Position = {row: 0, col: 3}
 
     const result = getNumOfNeighbors(board, position)
     

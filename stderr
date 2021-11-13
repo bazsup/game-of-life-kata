@@ -1,15 +1,43 @@
-PASS ./gol.test.ts
+FAIL ./gol.test.ts
   isCellAlive
-    ✓ an alive cell should be die when has no neighbor (3 ms)
-    ✓ an alive cell should still alive when has 2 neighbors
-    ✓ a dead cell should be alive when has 3 neighbors (1 ms)
-    ✓ a dead cell should still die when has 2 neighbors
+    ✓ an alive cell should be die when has no neighbor (2 ms)
+    ✓ an alive cell should still alive when has 2 neighbors (1 ms)
+    ✓ a dead cell should be alive when has 3 neighbors
+    ✓ a dead cell should still die when has 2 neighbors (1 ms)
   getNumOfNeighbors
-    ✓ should has no neighbor (1 ms)
-    ✓ should return for 1 neighbor on the right
+    ✓ should has no neighbor (6 ms)
+    ✓ should return 1 for 1 neighbor on the right (1 ms)
+    ✕ should return 1 for 1 neighbor on the left (2 ms)
 
-Test Suites: 1 passed, 1 total
-Tests:       6 passed, 6 total
+  ● getNumOfNeighbors › should return 1 for 1 neighbor on the left
+
+    expect(received).toEqual(expected) // deep equality
+
+    Expected: 1
+    Received: 0
+
+      56 |     const result = getNumOfNeighbors(board, position)
+      57 |     
+    > 58 |     expect(result).toEqual(1)
+         |                    ^
+      59 |   });
+      60 | 
+      61 | })
+
+      at Object.<anonymous> (gol.test.ts:58:20)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 6 passed, 7 total
 Snapshots:   0 total
-Time:        3.579 s
+Time:        3.513 s
 Ran all test suites.
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! @ test: `jest --maxWorkers=2`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the @ test script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/sandbox/.npm/_logs/2021-11-13T14_10_20_275Z-debug.log
