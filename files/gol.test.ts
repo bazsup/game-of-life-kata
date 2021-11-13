@@ -244,7 +244,7 @@ const createBoard = (boardString: string): Board => {
 describe('createBoard', () => {
   it('should create a board from string', () => {
     const result = createBoard('*.\n' + '.*')
-    expect(result).toBe([['*', '.'], ['.', '*']])
+    expect(result).toEqual([['*', '.'], ['.', '*']])
   });
 });
 
